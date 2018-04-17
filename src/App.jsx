@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'reactstrap';
 import Sidebar from 'react-sidebar';
-import MaterialTitlePanel from './material_title_panel';
-import SidebarContent from './sidebar_content';
+import MaterialTitlePanel from './components/Material_title_panel';
+import SidebarContent from './components/Sidebar_content';
 import Card from './components/Card';
 
 const styles = {
@@ -74,7 +74,7 @@ class App extends Component {
             =
           </a>
         )}
-        <span> Responsive React Sidebar</span>
+        <span>News</span>
       </span>
     );
 
