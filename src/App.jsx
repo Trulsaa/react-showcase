@@ -5,6 +5,7 @@ import Sidebar from 'react-sidebar';
 import MaterialTitlePanel from './components/Material_title_panel';
 import SidebarContent from './components/Sidebar_content';
 import Card from './components/Card';
+import MapEurope from './components/MapEurope';
 
 const styles = {
   contentHeaderMenuLink: {
@@ -89,16 +90,7 @@ class App extends Component {
       <Sidebar {...sidebarProps}>
         <MaterialTitlePanel title={contentHeader}>
           <div style={styles.content}>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            <MapEurope />
             <Card />
             <Card />
             <Card />
