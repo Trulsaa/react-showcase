@@ -1,6 +1,7 @@
 import React from 'react';
 import MaterialTitlePanel from './Material_title_panel';
 import PropTypes from 'prop-types';
+import FormExample from './FormExample';
 
 const styles = {
   sidebar: {
@@ -25,23 +26,32 @@ const styles = {
   },
 };
 
-const SidebarContent = (props) => {
-  const style = props.style ? {...styles.sidebar, ...props.style} : styles.sidebar;
+const SidebarContent = props => {
+  const style = props.style
+    ? { ...styles.sidebar, ...props.style }
+    : styles.sidebar;
 
   const links = [];
 
   for (let ind = 0; ind < 10; ind++) {
     links.push(
-      <a key={ind} href="#" style={styles.sidebarLink}>Mock menu item {ind}</a>);
+      <a key={ind} href="#" style={styles.sidebarLink}>
+        Filter option {ind}
+      </a>,
+    );
   }
 
   return (
     <MaterialTitlePanel title="Menu" style={style}>
       <div style={styles.content}>
-        <a href="index.html" style={styles.sidebarLink}>Home</a>
-        <a href="responsive_example.html" style={styles.sidebarLink}>Responsive Example</a>
+        <a href="index.html" style={styles.sidebarLink}>
+          News
+        </a>
+        <a href="responsive_example.html" style={styles.sidebarLink}>
+          Reports
+        </a>
         <div style={styles.divider} />
-        {links}
+        <FormExample />
       </div>
     </MaterialTitlePanel>
   );

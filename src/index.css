@@ -1,0 +1,21 @@
+.content {
+  padding: 16px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.map {
+  grid-column: span 2;
+}
+
+@media (max-width: 560px) {
+  .map {
+    grid-column: span 1;
+  }
+}
+
+.croppedImage {
+  position: absolute;
+  margin: -30% 0px -10% 0px;
+}

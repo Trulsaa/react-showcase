@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'reactstrap';
+import './index.css';
 import Sidebar from 'react-sidebar';
 import MaterialTitlePanel from './components/Material_title_panel';
 import SidebarContent from './components/Sidebar_content';
@@ -12,12 +12,6 @@ const styles = {
     textDecoration: 'none',
     color: 'white',
     padding: 8,
-  },
-  content: {
-    padding: '16px',
-    display: 'grid',
-    gridGap: '20px',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
   },
 };
 
@@ -75,7 +69,8 @@ class App extends Component {
             =
           </a>
         )}
-        <span>News</span>
+
+        <span><img width="30px" src="/images/Logo.png" /> News</span>
       </span>
     );
 
@@ -89,18 +84,11 @@ class App extends Component {
     return (
       <Sidebar {...sidebarProps}>
         <MaterialTitlePanel title={contentHeader}>
-          <div style={styles.content}>
-            <MapEurope />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+          <div className="content">
+            <div className="map">
+              <MapEurope />
+            </div>
+            {Array.from({ length: 100 }).map((c, i) => <Card key={i} />)}
           </div>
         </MaterialTitlePanel>
       </Sidebar>

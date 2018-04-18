@@ -7,7 +7,7 @@ const styles = {
     fontWeight: 300,
   },
   header: {
-    backgroundColor: '#002e5e',
+    backgroundColor: 'rgb(30, 60, 132)',
     color: 'white',
     padding: '16px',
     fontSize: '1.5em',
@@ -19,7 +19,9 @@ const MaterialTitlePanel = (props) => {
 
   return (
     <div style={rootStyle}>
-      <div style={styles.header}>{props.title}</div>
+      <div style={styles.header}>
+        {props.title}
+      </div>
       {props.children}
     </div>
   );

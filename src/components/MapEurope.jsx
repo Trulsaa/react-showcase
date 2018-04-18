@@ -1,24 +1,21 @@
 import React from 'react';
 import Highlight from 'highcharts';
 import ReactHighmaps from 'react-highcharts/ReactHighmaps';
-import map from '../mapdata/europe';
+import map from '../mapdata/world';
 
 class MapEurope extends React.Component {
   config = {
-    chart: {
-      spacingBottom: 20,
-    },
     title: {
-      text: 'Europe time zones',
+      text: 'Map of many contries',
     },
 
     legend: {
-      enabled: true,
+      enabled: false,
     },
 
     plotOptions: {
       map: {
-        allAreas: false,
+        allAreas: true,
         joinBy: ['iso-a2', 'code'],
         dataLabels: {
           enabled: true,
