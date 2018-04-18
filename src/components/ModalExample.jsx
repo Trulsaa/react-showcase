@@ -27,7 +27,7 @@ class ModalExample extends React.Component {
           size="lg">
           <ModalHeader toggle={this.props.toggle}>Modal title</ModalHeader>
           <ModalBody>
-            <img width="100%" src="/images/13.jpg" />
+            <img width="100%" src={this.props.imgUrl} />
             <b>Subtitle</b>
             <br />
             {pars}

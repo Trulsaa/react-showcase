@@ -26,18 +26,15 @@ class Article extends React.Component {
     });
   }
 
-  randomNumber(limit) {
-    return Math.floor(Math.random() * limit) + 1;
-  }
-
   render() {
+    const imgUrl = `https://picsum.photos/200?image=${this.props.index + 974}`
     return (
       <div>
         <Card>
           <CardImg
             top
             width="100%"
-            src={`/images/${this.randomNumber(12)}.jpg`}
+            src={imgUrl}
             alt="Card image cap"
           />
           <CardBody>
@@ -52,7 +49,7 @@ class Article extends React.Component {
             </Button>
           </CardBody>
         </Card>
-        <ModalExample modal={this.state.modal} toggle={this.toggle} />
+        <ModalExample modal={this.state.modal} toggle={this.toggle} imgUrl={imgUrl}/>
       </div>
     );
   }

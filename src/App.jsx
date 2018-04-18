@@ -70,7 +70,8 @@ class App extends Component {
           </a>
         )}
 
-        <span><img width="30px" src="/images/Logo.png" /> News</span>
+        <span>News</span>
+
       </span>
     );
 
@@ -88,7 +89,7 @@ class App extends Component {
             <div className="map">
               <MapEurope />
             </div>
-            {Array.from({ length: 100 }).map((c, i) => <Card key={i} />)}
+            {Array.from({ length: 30 }).map((c, i) => <Card key={i} index={i}/>)}
           </div>
         </MaterialTitlePanel>
       </Sidebar>
