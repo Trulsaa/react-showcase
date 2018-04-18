@@ -27,14 +27,14 @@ class Article extends React.Component {
   }
 
   render() {
-    const imgUrl = `https://picsum.photos/200?image=${this.props.index + 974}`
     return (
       <div>
         <Card>
           <CardImg
             top
             width="100%"
-            src={imgUrl}
+            src={`https://picsum.photos/200/130?image=${this.props.index +
+              974}`}
             alt="Card image cap"
           />
           <CardBody>
@@ -49,7 +49,12 @@ class Article extends React.Component {
             </Button>
           </CardBody>
         </Card>
-        <ModalExample modal={this.state.modal} toggle={this.toggle} imgUrl={imgUrl}/>
+        <ModalExample
+          modal={this.state.modal}
+          toggle={this.toggle}
+          imgUrl={`https://picsum.photos/500/325?image=${this.props.index +
+            974}`}
+        />
       </div>
     );
   }
