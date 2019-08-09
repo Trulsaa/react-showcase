@@ -1,3 +1,7 @@
+* {
+  font-family: "cheltenham-italic-700" ,georgia,"times new roman",times,serif;
+}
+
 .content {
   padding: 16px;
   display: grid;
